@@ -1,0 +1,81 @@
+.booking-grid-container {
+  display: flex;
+  max-height: 100vh; /* Ensure the container doesn't overflow vertically */
+  width: auto;
+  overflow-y: auto;
+}
+
+.whole-grid {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.employee-names {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  left: 0;
+  background-color: #fff;
+  z-index: 1;
+  border-right: 1px solid #ccc; /* Optional: Add a border to separate the names */
+  color: blue;
+}
+
+.employee-name,
+.employee-row {
+  display: flex;
+  align-items: center; /* Ensure that items are vertically centered */
+  height: 40px; /* Set a fixed height for consistency */
+  border-bottom: 1px solid #ccc; /* Add a bottom border to match the booking cells */
+}
+
+.date-row {
+  display: flex;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  z-index: 2;
+  flex-direction: row; /* Ensure the dates are displayed horizontally */
+}
+
+.date-cell {
+  width: 40px;
+  height: 40px; /* Match the height of the employee name */
+  border: 1px solid #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: blue;
+  font-size: 0.8rem;
+  transform: rotate(-90deg); /* Rotate the text 90 degrees */
+  transform-origin: bottom left; /* Adjust the origin to align properly */
+}
+
+.booking-grid-wrapper {
+  overflow-x: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.booking-grid {
+  display: flex;
+  flex-direction: column; /* Ensure that employee rows are stacked vertically */
+}
+
+.employee-row {
+  display: flex;
+  flex-direction: row; /* Ensure that booking cells are laid out horizontally */
+}
+
+.booking-cell {
+  width: 40px;
+  height: 40px; /* Match the height of the employee name */
+  border: 1px solid #ccc;
+}
+
+.booking-cell.booked {
+  background-color: red;
+}

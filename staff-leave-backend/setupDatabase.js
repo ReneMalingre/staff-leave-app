@@ -1,5 +1,5 @@
-const sqlite3 = require("sqlite3").verbose();
-const db = new sqlite3.Database("./leaveBookings.db");
+const sqlite3 = require('sqlite3').verbose()
+const db = new sqlite3.Database('./staff-leave-backend/leaveBookings.db')
 
 db.serialize(() => {
   // Create the bookings table
@@ -22,17 +22,17 @@ db.serialize(() => {
           actionedOn TEXT,
           FOREIGN KEY (employeeID) REFERENCES employees(id)
       )
-    `);
+    `)
 
   // Create the employees table
   db.run(`
       CREATE TABLE IF NOT EXISTS employees (
-          id INTEGER PRIMARY KEY AUTOINCREMENT,
+          id INTEGER PRIMARY KEY,
           name TEXT,
           homeBranch TEXT,
           staffType TEXT
       )
-    `);
-});
+    `)
+})
 
-db.close();
+db.close()

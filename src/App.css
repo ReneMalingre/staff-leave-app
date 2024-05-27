@@ -5,6 +5,10 @@
   text-align: center;
 }
 
+.component {
+  margin-bottom: 10px; /* Adjust the value as needed */
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
